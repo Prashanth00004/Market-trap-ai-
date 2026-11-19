@@ -1,0 +1,131 @@
+{
+  "project": "Market Trap AI v2.0 (Institutional Liquidity Sweep Edition)",
+  "assets_covered": [
+    "CRYPTO (BTC-USD)",
+    "GOLD (XAU-USD)",
+    "CRUDE (WTI-OIL)"
+  ],
+  "ml_classifier_evaluation": {
+    "test_samples": 1350,
+    "positive_traps_in_test": 11,
+    "precision": 0.9091,
+    "recall": 0.9091,
+    "f1_score": 0.9091,
+    "roc_auc": 0.9998,
+    "top_features": {
+      "volume_ratio": 0.2973,
+      "sentiment_price_divergence": 0.1964,
+      "atr_ratio": 0.1259,
+      "urgency_score": 0.1206,
+      "upper_wick_ratio": 0.0839,
+      "lower_wick_ratio": 0.0717,
+      "sentiment_score": 0.0264
+    }
+  },
+  "strategy_and_cross_asset_analytics": {
+    "by_asset": {
+      "CRUDE": {
+        "detected_traps": 11,
+        "bull_traps": 4,
+        "bear_traps": 7,
+        "win_rate_pct": 100.0,
+        "avg_return_bps": 74.12,
+        "profit_factor": 99.99,
+        "sharpe_ratio": 46.94,
+        "max_drawdown_pct": 0.0
+      },
+      "CRYPTO": {
+        "detected_traps": 16,
+        "bull_traps": 6,
+        "bear_traps": 10,
+        "win_rate_pct": 81.25,
+        "avg_return_bps": 75.89,
+        "profit_factor": 6.46,
+        "sharpe_ratio": 14.32,
+        "max_drawdown_pct": -1.8
+      },
+      "GOLD": {
+        "detected_traps": 19,
+        "bull_traps": 11,
+        "bear_traps": 8,
+        "win_rate_pct": 84.21,
+        "avg_return_bps": 25.65,
+        "profit_factor": 7.17,
+        "sharpe_ratio": 13.38,
+        "max_drawdown_pct": -0.62
+      }
+    },
+    "killzone_attribution": {
+      "in_active_killzone": {
+        "detected_traps": 29,
+        "bull_traps": 15,
+        "bear_traps": 14,
+        "win_rate_pct": 89.66,
+        "avg_return_bps": 73.58,
+        "profit_factor": 12.68,
+        "sharpe_ratio": 19.05,
+        "max_drawdown_pct": -1.24
+      },
+      "off_hours": {
+        "detected_traps": 17,
+        "bull_traps": 6,
+        "bear_traps": 11,
+        "win_rate_pct": 82.35,
+        "avg_return_bps": 22.54,
+        "profit_factor": 4.23,
+        "sharpe_ratio": 9.37,
+        "max_drawdown_pct": -0.62
+      }
+    },
+    "by_catalyst_regime": {
+      "LEVERAGE_LIQUIDATION_SWEEP": {
+        "detected_traps": 1,
+        "bull_traps": 0,
+        "bear_traps": 1,
+        "win_rate_pct": 100.0,
+        "avg_return_bps": 103.11,
+        "profit_factor": 99.99,
+        "sharpe_ratio": 0.0,
+        "max_drawdown_pct": 0.0
+      },
+      "MACRO_NEWS_SWEEP": {
+        "detected_traps": 25,
+        "bull_traps": 9,
+        "bear_traps": 16,
+        "win_rate_pct": 100.0,
+        "avg_return_bps": 62.25,
+        "profit_factor": 99.99,
+        "sharpe_ratio": 28.48,
+        "max_drawdown_pct": 0.0
+      },
+      "SESSION_KILLZONE_SWEEP": {
+        "detected_traps": 7,
+        "bull_traps": 4,
+        "bear_traps": 3,
+        "win_rate_pct": 100.0,
+        "avg_return_bps": 106.2,
+        "profit_factor": 99.99,
+        "sharpe_ratio": 92.51,
+        "max_drawdown_pct": 0.0
+      }
+    },
+    "total_traps_evaluated": 46,
+    "cross_asset_return_correlation": {
+      "CRUDE": {
+        "CRUDE": 1.0,
+        "CRYPTO": 0.013,
+        "GOLD": 0.0363
+      },
+      "CRYPTO": {
+        "CRUDE": 0.013,
+        "CRYPTO": 1.0,
+        "GOLD": 0.0557
+      },
+      "GOLD": {
+        "CRUDE": 0.0363,
+        "CRYPTO": 0.0557,
+        "GOLD": 1.0
+      }
+    }
+  }
+}

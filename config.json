@@ -1,0 +1,87 @@
+{
+  "assets": {
+    "CRYPTO": {
+      "symbol": "BTC-USD",
+      "atr_impulse_multiplier": 2.1,
+      "volume_surge_multiplier": 1.75,
+      "wick_rejection_ratio": 0.5,
+      "lookback_range_bars": 24,
+      "reentry_window_bars": 4,
+      "equal_level_tolerance_pct": 0.0015,
+      "killzones_utc": [
+        {
+          "name": "US_ETF_EQUITIES_OPEN",
+          "start_hour": 13,
+          "end_hour": 16
+        },
+        {
+          "name": "DAILY_CANDLE_FUNDING_RESET",
+          "start_hour": 23,
+          "end_hour": 2
+        },
+        {
+          "name": "LONDON_OPEN",
+          "start_hour": 7,
+          "end_hour": 9
+        }
+      ]
+    },
+    "GOLD": {
+      "symbol": "XAU-USD",
+      "atr_impulse_multiplier": 1.9,
+      "volume_surge_multiplier": 1.65,
+      "wick_rejection_ratio": 0.48,
+      "lookback_range_bars": 24,
+      "reentry_window_bars": 4,
+      "equal_level_tolerance_pct": 0.0008,
+      "killzones_utc": [
+        {
+          "name": "LONDON_OPEN_JUDAS",
+          "start_hour": 7,
+          "end_hour": 9
+        },
+        {
+          "name": "NY_OPEN_US_MACRO",
+          "start_hour": 12,
+          "end_hour": 15
+        },
+        {
+          "name": "LONDON_PM_FIX",
+          "start_hour": 15,
+          "end_hour": 16
+        }
+      ]
+    },
+    "CRUDE": {
+      "symbol": "WTI-OIL",
+      "atr_impulse_multiplier": 2.0,
+      "volume_surge_multiplier": 1.7,
+      "wick_rejection_ratio": 0.5,
+      "lookback_range_bars": 24,
+      "reentry_window_bars": 4,
+      "equal_level_tolerance_pct": 0.0012,
+      "killzones_utc": [
+        {
+          "name": "NYMEX_OPEN",
+          "start_hour": 13,
+          "end_hour": 15
+        },
+        {
+          "name": "EIA_INVENTORY_WINDOW",
+          "start_hour": 14,
+          "end_hour": 16
+        },
+        {
+          "name": "NYMEX_SETTLEMENT",
+          "start_hour": 18,
+          "end_hour": 19
+        }
+      ]
+    }
+  },
+  "model": {
+    "test_size": 0.25,
+    "random_state": 42,
+    "trap_probability_threshold": 0.6
+  }
+}
